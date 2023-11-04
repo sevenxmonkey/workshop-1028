@@ -1,0 +1,98 @@
+* {
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
+  color: greenyellow
+}
+
+.header {
+  height: 60px;
+  width: 100%;
+  border-bottom: 1px solid greenyellow;
+  background-color: black;
+
+  position: fixed;
+  top: 0;
+  z-index: 10;
+}
+
+.header-wrapper{
+  width: 960px;
+  height: 50px;
+  margin: auto;
+
+  display: flex;
+  position: relative;
+}
+
+.manu{
+  display: flex;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.manu-item{
+  width: 80px;
+  text-align: right;
+}
+
+.header-title{
+  font-size: 24px;
+  font-weight: 500;
+  position: absolute;
+  bottom: 0;
+}
+
+.content {
+  position: relative;
+  top: 70px;
+
+  width: 960px;
+  margin: auto;
+}
+
+.line {
+  display: flex;
+  position: relative;
+  margin: 10px 0;
+}
+
+.freq-btns {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.btn{
+  width: 50px;
+  border: 1px solid greenyellow;
+  margin: 0 3px;
+  padding: 3px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: rgba(172, 255, 47, 0.418);
+}
+
+.map-wrapper{
+  width: 30%;
+}
+
+.vis-wrapper{
+  margin-top: 18px;
+  width: 70%;
+}
+
+.map-content, .vis-wrapper{
+  height: 500px;
+  border: 1px solid greenyellow;
+}
+
+#project-title-1{
+  font-size: 36px;
+  font-weight: 900;
+}
