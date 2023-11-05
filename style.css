@@ -1,0 +1,21 @@
+.parent #c3 {
+  font-family: Georgia, serif;
+  font-size: 23px;
+  letter-spacing: 2px;
+  word-spacing: 2px;
+  color: #FF472E;
+  font-weight: 400;
+  text-decoration: none;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+}
+
+#c2 {
+  background-color: #FF472E;
+  height: 50px;
+  width: 50px;
+
+  padding: 5px;
+  border: 1px dashed rgb(165, 0, 225);
+}

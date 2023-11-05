@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+  height: 80px;
+  width: 100%;
+  border-bottom: 2px solid black;
+  background-color: white;
+
+  position: fixed;
+  top: 0;
+
+  z-index: 100;
+}
+
+.content{
+  position: relative;
+  top: 90px;
+}
+
+.project-intro{
+  margin: 20px 0;
+}
+
+.project-intro .title{
+  font-size: 50px;
+  font-weight: 800;
+}
+
+.project-container{
+  display: flex;
+}
+
+.map{
+  width: 30%;
+}
+
+.vis{
+  width: 70%;
+  display: flex;
+
+  position: relative;
+  top: 18px;
+}
+
+.btns{
+  width: 200px;
+}
+
+.btn-item{
+  display: flex;
+}
+
+.line {
+  width: 50px;
+  height: 13px;
+  border-bottom: 1px dashed black;
+}
+
+.btn{
+  width: 80px;
+  border: 1px solid black;
+  padding: 3px;
+  margin: 5px;
+}
+
+.map-img{
+  border: 1px solid black;
+  height: 350px;
+}
+
+.audio-vis{
+  border: 1px solid black;
+  width: 100%;
+  height: 350px;
+}

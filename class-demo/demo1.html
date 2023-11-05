@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <link rel="stylesheet" href="demo1.css" /> -->
+  <title>Demo1</title>
+</head>
+
+<body>
+  <div class="div">
+    <div class="div-2">
+      <div class="div-3">
+        <span
+          style="
+            font-family: Arial, sans-serif;
+            font-weight: 700;
+          "
+        >
+          X
+        </span>
+        <span
+          style="
+            font-family: Arial, sans-serif;
+            font-weight: 400;
+          "
+        >
+          portfolio
+        </span>
+      </div>
+      <div class="div-4">
+        <div class="div-5">Projects</div>
+        <div class="div-6">About</div>
+      </div>
+    </div>
+    <div class="div-7"></div>
+    <div class="div-8">
+      <div class="div-9">
+        <div class="column">
+          <div class="div-10">
+            <div class="div-11">City Sound</div>
+            <div class="div-12">
+              Project description, e.g. Hover location to watch the sound.
+            </div>
+            <div class="div-13">Map Location: Road A</div>
+            <img
+              loading="lazy"
+              srcset="..."
+              class="img"
+            />
+          </div>
+        </div>
+        <div class="column-2">
+          <div class="div-14">
+            <div class="div-15">
+              <div class="div-16">Test</div>
+              <img
+                loading="lazy"
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/dd7f99d6-931c-4213-9593-bb07f2bdc420?"
+                class="img-2"
+              />
+            </div>
+            <div class="div-17">
+              <div class="div-18">Freq1</div>
+              <img
+                loading="lazy"
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/b2eef349-34f9-4a35-8e34-b4c6e7f4c207?"
+                class="img-3"
+              />
+            </div>
+            <div class="div-19">
+              <div class="div-20">Freq2</div>
+              <img
+                loading="lazy"
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/1ebb32db-8dc0-4d2b-8f04-d9ad1c320bb5?"
+                class="img-4"
+              />
+            </div>
+            <div class="div-21">
+              <div class="div-22">Freq3</div>
+              <img
+                loading="lazy"
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/9c147e56-5f35-43fc-9702-895e5855fe5c?"
+                class="img-5"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="column-3">
+          <div class="div-23"><div class="div-24">Week 3/4 content</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <style>
+    .div {
+      background-color: #fff;
+      display: flex;
+      flex-direction: column;
+    }
+    .div-2 {
+      align-self: center;
+      display: flex;
+      margin-top: 32px;
+      width: 930px;
+      max-width: 100%;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 0 20px;
+    }
+    @media (max-width: 991px) {
+      .div-2 {
+        flex-wrap: wrap;
+      }
+    }
+    .div-3 {
+      color: #000;
+      font: 400 16px Arial, sans-serif;
+    }
+    .div-4 {
+      align-self: start;
+      display: flex;
+      margin-top: 4px;
+      width: 154px;
+      max-width: 100%;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .div-5 {
+      color: #000;
+      text-align: right;
+      flex: 1;
+      font: 400 12px Arial, sans-serif;
+    }
+    .div-6 {
+      color: #000;
+      text-align: right;
+      flex: 1;
+      font: 400 12px Arial, sans-serif;
+    }
+    .div-7 {
+      background-color: #000;
+      align-self: stretch;
+      min-height: 2px;
+      margin-top: 17px;
+      width: 100%;
+    }
+    @media (max-width: 991px) {
+      .div-7 {
+        max-width: 100%;
+      }
+    }
+    .div-8 {
+      align-self: center;
+      width: 100%;
+      max-width: 1001px;
+      margin: 25px 0 118px;
+      padding: 0 20px;
+    }
+    @media (max-width: 991px) {
+      .div-8 {
+        max-width: 100%;
+        margin-bottom: 40px;
+      }
+    }
+    .div-9 {
+      gap: 20px;
+      display: flex;
+    }
+    @media (max-width: 991px) {
+      .div-9 {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0px;
+      }
+    }
+    .column {
+      display: flex;
+      flex-direction: column;
+      line-height: normal;
+      width: 31%;
+      margin-left: 0px;
+    }
+    @media (max-width: 991px) {
+      .column {
+        width: 100%;
+      }
+    }
+    .div-10 {
+      display: flex;
+      flex-grow: 1;
+      flex-direction: column;
+    }
+    .div-11 {
+      color: #000;
+      align-self: stretch;
+      font: 700 40px Arial, sans-serif;
+    }
+    .div-12 {
+      color: #000;
+      align-self: stretch;
+      margin-top: 13px;
+      font: 400 12px Arial, sans-serif;
+    }
+    .div-13 {
+      color: #000;
+      align-self: stretch;
+      margin-top: 26px;
+      font: 400 12px Arial, sans-serif;
+    }
+    .img {
+      aspect-ratio: 0.63;
+      object-fit: contain;
+      object-position: center;
+      width: 100%;
+      overflow: hidden;
+      align-self: stretch;
+      flex-grow: 1;
+    }
+    .column-2 {
+      display: flex;
+      flex-direction: column;
+      line-height: normal;
+      width: 13%;
+      margin-left: 20px;
+    }
+    @media (max-width: 991px) {
+      .column-2 {
+        width: 100%;
+      }
+    }
+    .div-14 {
+      display: flex;
+      margin-top: 102px;
+      flex-direction: column;
+    }
+    @media (max-width: 991px) {
+      .div-14 {
+        margin-top: 40px;
+      }
+    }
+    .div-15 {
+      align-self: stretch;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 0px;
+    }
+    .div-16 {
+      color: #000;
+      text-align: center;
+      align-self: start;
+      border: 1px solid #000;
+      width: 98px;
+      max-width: 100%;
+      padding: 11px 28px 23px;
+      font: 400 12px Arial, sans-serif;
+    }
+    @media (max-width: 991px) {
+      .div-16 {
+        padding: 0 20px;
+      }
+    }
+    .img-2 {
+      aspect-ratio: 19.5;
+      object-fit: contain;
+      object-position: center;
+      width: 39px;
+      stroke-width: 2px;
+      stroke: #000;
+      overflow: hidden;
+      align-self: start;
+      margin-top: 20px;
+      max-width: 100%;
+    }
+    .div-17 {
+      align-self: stretch;
+      display: flex;
+      margin-top: 10px;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 0px;
+    }
+    .div-18 {
+      color: #000;
+      text-align: center;
+      align-self: start;
+      border: 1px solid #000;
+      width: 93px;
+      max-width: 100%;
+      padding: 10px 33px 20px 32px;
+      font: 400 12px Arial, sans-serif;
+    }
+    @media (max-width: 991px) {
+      .div-18 {
+        padding: 0 20px;
+      }
+    }
+    .img-3 {
+      aspect-ratio: 19.5;
+      object-fit: contain;
+      object-position: center;
+      width: 39px;
+      stroke-width: 2px;
+      stroke: #000;
+      overflow: hidden;
+      align-self: start;
+      margin-top: 19px;
+      max-width: 100%;
+    }
+    .div-19 {
+      align-self: stretch;
+      display: flex;
+      margin-top: 10px;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 0px;
+    }
+    .div-20 {
+      color: #000;
+      text-align: center;
+      align-self: start;
+      border: 1px solid #000;
+      width: 93px;
+      max-width: 100%;
+      padding: 10px 31px 21px 32px;
+      font: 400 12px Arial, sans-serif;
+    }
+    @media (max-width: 991px) {
+      .div-20 {
+        padding: 0 20px;
+      }
+    }
+    .img-4 {
+      aspect-ratio: 19.5;
+      object-fit: contain;
+      object-position: center;
+      width: 39px;
+      stroke-width: 2px;
+      stroke: #000;
+      overflow: hidden;
+      align-self: start;
+      margin-top: 18px;
+      max-width: 100%;
+    }
+    .div-21 {
+      align-self: stretch;
+      display: flex;
+      margin-top: 9px;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 0px;
+    }
+    .div-22 {
+      color: #000;
+      text-align: center;
+      align-self: start;
+      border: 1px solid #000;
+      width: 93px;
+      max-width: 100%;
+      padding: 11px 31px 20px 32px;
+      font: 400 12px Arial, sans-serif;
+    }
+    @media (max-width: 991px) {
+      .div-22 {
+        padding: 0 20px;
+      }
+    }
+    .img-5 {
+      aspect-ratio: 19.5;
+      object-fit: contain;
+      object-position: center;
+      width: 39px;
+      stroke-width: 2px;
+      stroke: #000;
+      overflow: hidden;
+      align-self: start;
+      margin-top: 18px;
+      max-width: 100%;
+    }
+    .column-3 {
+      display: flex;
+      flex-direction: column;
+      line-height: normal;
+      width: 56%;
+      margin-left: 20px;
+    }
+    @media (max-width: 991px) {
+      .column-3 {
+        width: 100%;
+      }
+    }
+    .div-23 {
+      border: 1px solid #000;
+      background-color: #f4f4f4;
+      display: flex;
+      flex-grow: 1;
+      flex-direction: column;
+      width: 100%;
+      margin: 102px auto 0;
+      padding: 214px 80px 260px;
+    }
+    @media (max-width: 991px) {
+      .div-23 {
+        max-width: 100%;
+        margin-top: 40px;
+        padding: 100px 20px;
+      }
+    }
+    .div-24 {
+      color: rgba(0, 0, 0, 0.25);
+      text-align: center;
+      align-self: center;
+      max-width: 391px;
+      margin: 0 0 -52px -18px;
+      font: 700 24px Arial, sans-serif;
+    }
+    @media (max-width: 991px) {
+      .div-24 {
+        margin-bottom: 10px;
+      }
+    }
+  </style>
+  
+</body>
+
+</html>
