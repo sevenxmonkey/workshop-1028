@@ -1,98 +1,106 @@
 * {
-  margin: 0px;
+  margin: 0;
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
-  background-color: black;
-  color: greenyellow
 }
 
-.header {
-  height: 60px;
+.header{
+  height: 50px;
   width: 100%;
-  border-bottom: 1px solid greenyellow;
-  background-color: black;
 
+  background-color: white;
+
+  border-bottom: 2px solid black;
   position: fixed;
   top: 0;
-  z-index: 10;
+
+  z-index: 100;
 }
 
-.header-wrapper{
-  width: 960px;
-  height: 50px;
-  margin: auto;
-
+.header-container{
   display: flex;
+
   position: relative;
-}
 
-.manu{
-  display: flex;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-}
-
-.manu-item{
-  width: 80px;
-  text-align: right;
-}
-
-.header-title{
-  font-size: 24px;
-  font-weight: 500;
-  position: absolute;
-  bottom: 0;
-}
-
-.content {
-  position: relative;
-  top: 70px;
-
-  width: 960px;
+  width: 880px;
   margin: auto;
 }
 
-.line {
+.navigation{
   display: flex;
-  position: relative;
-  margin: 10px 0;
-}
 
-.freq-btns {
-  display: flex;
   position: absolute;
-  bottom: 0;
   right: 0;
 }
 
-.btn{
-  width: 50px;
-  border: 1px solid greenyellow;
-  margin: 0 3px;
-  padding: 3px;
-  cursor: pointer;
+.nav-item{
+  width: 100px;
+  text-align: center;
 }
 
-.btn:hover {
-  background-color: rgba(172, 255, 47, 0.418);
+.content{
+  position: relative;
+  top: 60px;
+
+  width: 880px;
+  margin: auto;
 }
 
-.map-wrapper{
+.hci-container{
+  margin-top: 20px;
+
+  display: flex;
+}
+
+.map-container{
   width: 30%;
 }
 
-.vis-wrapper{
-  margin-top: 18px;
-  width: 70%;
-}
-
-.map-content, .vis-wrapper{
+.map{
   height: 500px;
-  border: 1px solid greenyellow;
+  border: 1px solid black;
 }
 
-#project-title-1{
-  font-size: 36px;
-  font-weight: 900;
+.vis-container{
+  width: 70%;
+  display: flex;
+  position: relative;
+  top: 18px;
+}
+
+.btns{
+  width: 150px;
+  margin-left: 20px;
+}
+
+.btn{
+  width: 80px;
+  height: 30px;
+
+  border: 1px solid black;
+  margin-bottom: 10px;
+  padding: 3px;
+  text-align: center;
+}
+
+.btn:hover{
+  cursor: pointer;
+  background-color: black;
+  color: white;
+}
+
+.btn-item{
+  display: flex;
+}
+
+.line{
+  height: 15px;
+  width: 50px;
+  border-bottom: 1px dashed black;
+}
+
+.vis{
+  height: 500px;
+  width: 100%;
+  border: 1px solid black;
 }
