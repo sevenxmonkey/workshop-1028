@@ -38,7 +38,7 @@ const startMic = () => {
         // 打印数据
         // console.log('amptArray', amptArray);
         // console.log('freqArray', freqArray);
-        
+
         // draw2(freqArray);
         // draw3(freqArray);
         // draw4(freqArray);
@@ -182,15 +182,15 @@ const draw5 = (freqs) => {
 
   context.beginPath();
   context.moveTo(moveRects[0].x, moveRects[0].y);
-  
-  for(let i = 1; i < freqs.length; i++){
+
+  for (let i = 1; i < freqs.length; i++) {
     const rect = moveRects[i];
     resetMoveRect(rect);
     // 创造一个随机运动
     rect.x += (Math.random() <= 0.5 ? 1 : -1) * ((freqs[i] - 10) * 0.1);
     rect.y += (Math.random() <= 0.5 ? 1 : -1) * ((freqs[i] - 10) * 0.1);
 
-    if(freqs[i] > 50){
+    if (freqs[i] > 50) {
       context.lineTo(moveRects[i].x, moveRects[i].y);
       context.arc(moveRects[i].x, moveRects[i].y, 5, 0, 2 * Math.PI);
     }
@@ -231,38 +231,44 @@ function getPointMatrix(n, ratio) {
     [points[i], points[j]] = [points[j], points[i]];
   }
 
-  //[1,2,3,4]
-  const result = []; // result去储存结果: 4个array
-  const sum = ratio.reduce((a, b) => a + b, 0); // 计算ratio的总数
+  // ratio是一个数组，比如[1,2,3,4]
+  const result = []; // result用于存储最终的分段数组
+  const sum = ratio.reduce((a, b) => a + b, 0); // 计算ratio数组中所有元素的总和
 
-  // 将这个点的总长度分成[1,2,3,4]比例的四个段
-  // 计算每个段的起始index和终止index，然后把这些点取出来存到result里
-  let startIndex = 0;
+  // 遍历ratio数组，根据每个比例元素来分割points数组
+  let startIndex = 0; // 开始索引，用于标记每个分段的起始位置
   for (let i = 0; i < ratio.length; i++) {
-    let length = Math.round(points.length * (ratio[i] / sum)); // 计算出属于这个比例的长度
-    let part = points.slice(startIndex, startIndex + length); // 分割出数组中属于这个长度的分段
-    result.push(part); // 将分段存进数组
+    // 根据比例计算当前段的长度
+    // 使用Math.round来确保长度为整数，可能会有轻微的四舍五入误差
+    let length = Math.round(points.length * (ratio[i] / sum));
 
-    startIndex += length; // 每个循环增加起始点，开启下一个循环
+    // 使用slice方法从points数组中截取当前比例所对应的分段
+    let part = points.slice(startIndex, startIndex + length);
+
+    // 将截取的分段添加到结果数组中
+    result.push(part);
+
+    // 更新startIndex为下一个分段的起始位置
+    startIndex += length;
   }
 
   return result;
 }
 
-// helper fucntion将一个array分成cnt段
-// 计算每一段的累积值，输出所有分段的累积值array
-// 这样我们就得到了一个频段的ration array
 function splitAndSumArray(array, cnt) {
-  let result = []; // 储存最后的输出变量
-  let partSize = Math.ceil(array.length / cnt); // 每段的长度
+  // 储存最后的输出结果，即每个分段的累积和
+  let result = []; 
+  // 计算每个分段的大致长度，使用Math.ceil确保长度为整数并覆盖所有元素
+  let partSize = Math.ceil(array.length / cnt); 
 
-  // 循环，每个循环计算partSize总量
+  // 循环遍历数组，以partSize为步长
   for (let i = 0; i < array.length; i += partSize) {
-    let part = array.slice(i, i + partSize);
-    let sum = part.reduce((a, b) => a + b, 0); // 计算本分段总数量
-    result.push(sum); // 储存结果
+    let part = array.slice(i, i + partSize); // 从数组中截取当前分段
+    let sum = part.reduce((a, b) => a + b, 0); // 计算当前分段的元素累积和
+    result.push(sum); // 将这个累积和添加到结果数组中
   }
-  return result; //输出结果
+
+  return result; // 返回包含所有分段累积和的数组
 }
 
 
