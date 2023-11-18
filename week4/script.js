@@ -225,9 +225,11 @@ function getPointMatrix(n, ratio) {
     }
   }
 
-  // Shuffle the points array
+  // 遍历矩阵中的每个元素，从最后一个元素开始向前
   for (let i = points.length - 1; i > 0; i--) {
+    // 随机选择一个索引j，范围从0到i（包括i）
     let j = Math.floor(Math.random() * (i + 1));
+    // 交换当前元素（matrix[i]）和随机选中的元素（matrix[j]）的位置
     [points[i], points[j]] = [points[j], points[i]];
   }
 
