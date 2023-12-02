@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" href="assets/icon.png">
+  <title>Sonic Landscapes</title>
+</head>
+
+<body>
+  <div>
+    <h1 class="title">Sonic Landscapes</h1>
+    <p class="desc">Interactive application to explore geographic locations through soundscapes.</p>
+  </div>
+  <div class="project">
+    <div class="map-container">
+      <div class="location-list">
+        <div class="location-item" id="loc1"></div>
+        <div class="location-item" id="loc2"></div>
+        <div class="location-item" id="loc3"></div>
+      </div>
+      <div class="map-legand" id="map-legand">
+        <strong id="map-legand-title"></strong>
+        <p id="map-legand-text"></p>
+      </div>
+      <img src="assets/city_1.png" class="map-img">
+    </div>
+    <div class="vis-container">
+      <div class="freq-btns">
+        <button class="freq-btn" id="freqAll">All</button>
+        <button class="freq-btn" id="freq1">Freq 1</button>
+        <button class="freq-btn" id="freq2">Freq 2</button>
+        <button class="freq-btn" id="freq3">Freq 3</button>
+      </div>
+      <div class="canvas-container">
+        <canvas id="canvas"></canvas>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
