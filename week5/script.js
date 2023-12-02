@@ -15,7 +15,7 @@ document.getElementById('stop-btn').addEventListener('click', () => {
   audio.pause();
 })
 
-const BIN = 64;
+const BIN = 512;
 
 // 定义startLoadResource函数来加载音频资源
 function startLoadResource() {
@@ -55,7 +55,7 @@ function startLoadResource() {
         // draw1(freqArray);
         // draw2(freqArray);
         // draw3(freqArray);
-        // draw4(freqArray);
+        draw4(freqArray);
 
         requestAnimationFrame(recursion); // 递归调用以持续分析
       }
@@ -121,7 +121,7 @@ class Particle {
   }
 }
 
-const colors = ["#264653", "#2A9D8F", "#E9C46A", "#F4A261", "#E76F51"]
+const colors = ["#004b23", "#006400", "#007200", "#008000", "#38b000", "#70e000", "#9ef01a", "#ccff33"];
 
 // 创建多个粒子
 const points = [];
@@ -202,9 +202,9 @@ class Ball {
     this.color = color;
   }
 
-  draw() {
+  draw(freq) {
     context.beginPath();
-    context.arc(this.x, this.y, this.r, 0, Math.PI * 2);
+    context.arc(this.x, this.y, 8 + freq * 0.2, 0, Math.PI * 2);
     context.fillStyle = this.color;
     context.fill();
     context.stroke();
@@ -215,6 +215,8 @@ class Ball {
   update(freq) {
     if (this.x + this.r + this.vx > WIDTH || this.x - this.r < 0) {
       this.vx = -this.vx * friction;
+    } else if (this.x - this.r < 0) {
+      this.vx = Math.max(-this.vx * friction, 0.1)
     }
     this.x += this.vx;
 
@@ -231,7 +233,7 @@ class Ball {
       this.vy += gravity - upForce
     }
     this.y += this.vy;
-    this.draw();
+    this.draw(freq);
   }
 }
 
