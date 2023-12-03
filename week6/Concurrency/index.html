@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Concurrency</title>
+</head>
+
+<style>
+.canvas-list{
+  position: relative;
+}
+#canvas-1,#canvas-2{
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 1px solid black;
+}
+</style>
+
+<body>
+  <div class="btns">
+    <button id="btn-1">Audio 1</button>
+    <button id="btn-2">Audio 2</button>
+  </div>
+  <div class="canvas-list">
+    <canvas id="canvas-1"></canvas>
+    <canvas id="canvas-2"></canvas>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
