@@ -54,8 +54,8 @@ function startLoadResource() {
          */
         // draw1(freqArray);
         // draw2(freqArray);
-        // draw3(freqArray);
-        draw4(freqArray);
+        draw3(freqArray);
+        // draw4(freqArray);
 
         requestAnimationFrame(recursion); // 递归调用以持续分析
       }
@@ -160,27 +160,38 @@ function draw2(freqs) {
   context.stroke();
 }
 
+const lineArray = [];
 function draw3(freqs) {
   // 使用filter方法筛选出每十个点中的第一个点，并更新这些点的位置
   const renderPoints = points.filter((point, index) => {
     point.update(freqs[index]);
     return index % 10 === 0;
   });
-
-  context.beginPath();
-  context.moveTo(renderPoints[0].x, renderPoints[0].y);
-
-  // 遍历筛选后的点，使用二次贝塞尔曲线连接它们
-  for (let i = 1; i < renderPoints.length - 2; i++) {
-    const { x, y } = renderPoints[i];
-    const { x: nextX, y: nextY } = renderPoints[i + 1]; // 下一个点的坐标
-
-    const cx = (x + nextX) / 2;
-    const cy = (y + nextY) / 2;
-    context.quadraticCurveTo(x, y, cx, cy);
+  if (lineArray.length > 10) {
+    lineArray.shift();
+  } else {
+    // Deep copy
+    lineArray.push(JSON.parse(JSON.stringify(renderPoints)))
   }
+  
+  console.log('lineArray.length', lineArray.length)
+  context.clearRect(0, 0, WIDTH, HEIGHT);
 
-  context.stroke();
+  lineArray.forEach((renderPoints) => {
+    context.beginPath();
+    context.moveTo(renderPoints[0].x, renderPoints[0].y);
+    // 遍历筛选后的点，使用二次贝塞尔曲线连接它们
+    for (let i = 1; i < renderPoints.length - 2; i++) {
+      const { x, y } = renderPoints[i];
+      const { x: nextX, y: nextY } = renderPoints[i + 1]; // 下一个点的坐标
+
+      const cx = (x + nextX) / 2;
+      const cy = (y + nextY) / 2;
+      context.quadraticCurveTo(x, y, cx, cy);
+    }
+
+    context.stroke();
+  })
 }
 
 // 获取给定值在固定范围内的索引
